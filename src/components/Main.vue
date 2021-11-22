@@ -199,7 +199,7 @@
       </div>
     </div>
     <!-- Fine pizze -->
-
+    <!-- Inizio section date -->
     <div class="row">
       <div
         class="
@@ -209,6 +209,7 @@
           align-items-center
           text-white
           background-date
+          p-0
         "
       >
         <div class="col-6">
@@ -216,8 +217,8 @@
           <h3 class="pb-4">DELISH PIZZA DEALS</h3>
           <div class="d-flex text-date">
             <div class="pe-4">
-              <h3 class="title-orange">02</h3>
-              <h6>NOV</h6>
+              <h4 class="title-orange fs-1">02</h4>
+              <h5>NOV</h5>
             </div>
             <div>
               <h3>TRADITIONAL NEAPOLTINA PIES IN KYOTO PIZZA MERCATO</h3>
@@ -226,29 +227,44 @@
           </div>
           <div class="d-flex text-date py-4">
             <div class="pe-4">
-              <h3 class="title-orange">02</h3>
-              <h6>NOV</h6>
+              <h3 class="title-orange fs-1">03</h3>
+              <h5>NOV</h5>
             </div>
             <div>
-              <h3>TRADITIONAL NEAPOLTINA PIES IN KYOTO PIZZA MERCATO</h3>
+              <h4>TERARAZZA PATIO DINING SPACE OPENING THIS WEEKEND</h4>
               <p class="title-orange">204 E. Pizzetta Tommaso</p>
             </div>
           </div>
           <div class="d-flex py-4">
             <div class="pe-4">
-              <h3 class="title-orange">02</h3>
-              <h6>NOV</h6>
+              <h4 class="title-orange fs-1">05</h4>
+              <h5>NOV</h5>
             </div>
             <div>
-              <h3>TRADITIONAL NEAPOLTINA PIES IN KYOTO PIZZA MERCATO</h3>
+              <h3>SIENNA PRIVATE DINING ROOM WITH STEPHANIE BRUUN</h3>
               <p class="title-orange">204 E. Pizzetta Tommaso</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="col-6">
+      <div class="col-6 p-0">
         <img src="@/assets/img/h3-img-5a.jpg" alt="" />
+      </div>
+    </div>
+    <!-- Fine section date -->
+
+    <div class="background-input-img">
+      <div class="row-cols-12 row position-relative">
+        <form class="form-input" action="">
+          <input type="text" placeholder="1 Person" />
+          <h6 class="text-white px-3">FOR</h6>
+          <input type="text" placeholder="11/29/2020" />
+          <h6 class="text-white px-3">AT</h6>
+          <input class="me-5" type="text" placeholder="7:00 pm" />
+          <button class="input-orange">BOOK A TABLE</button>
+        </form>
+        <h6 class="subtitle-form">*Powered by OpenTable</h6>
       </div>
     </div>
   </main>
@@ -344,9 +360,42 @@ export default {
 
 .background-date {
   background-color: black;
+  height: 800px;
 
   .text-date {
     border-bottom: 1px dotted;
+  }
+}
+
+.background-input-img {
+  background-image: url(../assets/img/h3-background-img-3.jpg);
+  margin: 10px 0;
+  .form-input {
+    display: flex;
+    justify-content: center;
+    padding: $padding_large;
+    align-items: center;
+
+    input {
+      padding: 10px;
+      border: 2px solid black;
+      font-size: small;
+    }
+
+    .input-orange {
+      color: white;
+      background-color: $color_text;
+      color: white;
+      padding: 10px 37px;
+      border: none;
+    }
+  }
+  .subtitle-form {
+    bottom: 62px;
+    position: absolute;
+    left: 26%;
+    color: white;
+    font-size: small;
   }
 }
 </style>
