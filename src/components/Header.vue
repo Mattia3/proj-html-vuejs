@@ -9,23 +9,19 @@
       </ul>
 
       <ul>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">PAGES</a></li>
-        <li><a href="#">MENU</a></li>
-        <li>
-          <img
-            src="@/assets/img/h5-logo-divided-header.png"
-            alt="Logo Navbar"
-          />
+        <li v-for="(link, i) in list" :key="i">
+          <a href="#">{{ link.title }}</a>
+          <img v-if="link.img" :src="link.img" alt="Logo Peppe" />
         </li>
-        <li><a href="#">EVENT</a></li>
-        <li><a href="#">BLOG</a></li>
-        <li><a href="#">LANDING</a></li>
       </ul>
 
       <ul>
-        <li><a href="#">CART</a></li>
-        <li><a href="#">SEARCH</a></li>
+        <li v-for="(link, i) in listRight" :key="i">
+          <a class="d-flex" href="#" :class="link.icon ? 'fa fa-search' : ''">
+            <img class="bg-white w-25" :src="link.img" alt="" />
+            {{ link.title }}</a
+          >
+        </li>
       </ul>
     </div>
     <!-- Fine Navbar -->
@@ -44,6 +40,50 @@
 <script>
 export default {
   name: "Header",
+  data() {
+    return {
+      list: [
+        {
+          title: "HOME",
+          href: "#",
+        },
+        {
+          title: "PAGES",
+          href: "#",
+        },
+        {
+          title: "MENU",
+          href: "#",
+        },
+        {
+          img: require("@/assets/img/h5-logo-divided-header.png"),
+        },
+        {
+          title: "EVENT",
+          href: "#",
+        },
+        {
+          title: "BLOG",
+          href: "#",
+        },
+        {
+          title: "LANDING",
+          href: "#",
+        },
+      ],
+
+      listRight: [
+        {
+          img: require("@/assets/svg/svg-1.svg"),
+          title: "CART",
+        },
+        {
+          icon: "fa fa-search",
+          title: "SEARCH",
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -79,6 +119,10 @@ export default {
       text-decoration: none;
       color: $color_white;
       padding: 0 20px;
+
+      &:hover {
+        color: blue;
+      }
     }
   }
 

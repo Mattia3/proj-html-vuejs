@@ -2,6 +2,7 @@ $color_white: white;
 $padding: 25px 0px;
 $color_text: #d2401e;
 $padding_large: 100px;
+$color_green: #339966;
 
 .title-oro {
   color: #bc984a;
@@ -17,9 +18,13 @@ $padding_large: 100px;
   right: 0;
   background-color: white;
   border: none;
-  transform: rotate(90deg) translateX(-50%);
-  padding: 16px;
-  border-radius: 45%;
+  transform: rotate(-90deg) translateX(50%);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  right: -44px;
+  padding-bottom: 35px;
+  color: #d2401e;
 }
 
 .button-left {
@@ -28,6 +33,18 @@ $padding_large: 100px;
   background-color: white;
   border: none;
   transform: rotate(90deg) translateX(-50%);
-  padding: 16px;
-  border-radius: 45%;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  left: -43px;
+  padding-bottom: 35px;
+  color: #d2401e;
+}
+
+.color-green {
+  color: $color_green;
+}
+
+.background-black {
+  background-color: black;
 }

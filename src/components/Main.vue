@@ -1,20 +1,7 @@
 <template>
   <main>
     <!-- Inizio prima section -->
-    <div class="row-cols-4 d-flex">
-      <div class="col">
-        <img class="main-img-section" src="@/assets/img/h3-img-1.jpg" alt="" />
-      </div>
-      <div class="col">
-        <img class="main-img-section" src="@/assets/img/h3-img-2.jpg" alt="" />
-      </div>
-      <div class="col">
-        <img class="main-img-section" src="@/assets/img/h3-img-3.jpg" alt="" />
-      </div>
-      <div class="col">
-        <img class="main-img-section" src="@/assets/img/h3-img-4.jpg" alt="" />
-      </div>
-    </div>
+    <Card></Card>
     <!-- Fine prima section -->
 
     <!-- Inizio Seconda Section -->
@@ -31,6 +18,11 @@
               NEW YORK-STYLE PIZZA SLICE IN NAPLES"
             </h4>
             <p class="text-color">WASHINGTON POST 2018</p>
+            <div class="d-flex justify-content-center">
+              <div class="next-slider"></div>
+              <div class="next-slider mx-2"></div>
+              <div class="next-slider"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -85,35 +77,15 @@
       </div>
     </div>
     <!-- Fine Special Section -->
+
     <!-- Inizio judge section -->
-    <div class="background-img-judge">
-      <div class="row">
-        <div class="col-4 container">
-          <h2>GO AHEAD AND BUILD YOUR OWN PIZZA WE WON'T JUDGE!</h2>
-        </div>
-      </div>
-    </div>
+    <Immagine></Immagine>
     <!-- Fine judge section -->
+
     <!-- Inizio section people -->
-    <div class="row row-cols-4">
-      <div class="col p-0">
-        <img
-          class="img-people"
-          src="@/assets/img/h1-team-1a-700x700.jpg"
-          alt=""
-        />
-      </div>
-      <div class="col p-0">
-        <img class="img-people" src="@/assets/img/h1-team-2a.jpg" alt="" />
-      </div>
-      <div class="col p-0">
-        <img class="img-people" src="@/assets/img/h1-team-4a.jpg" alt="" />
-      </div>
-      <div class="col p-0">
-        <img class="img-people" src="@/assets/img/h1-team-3a.jpg" alt="" />
-      </div>
-    </div>
+    <CardPeople></CardPeople>
     <!-- Fine section people -->
+
     <!-- Inizio section loghi -->
     <div class="row container-loghi">
       <div class="col-12 d-flex justify-content-center py-5">
@@ -139,65 +111,8 @@
         </div>
       </div>
     </div>
+    <CardPizza></CardPizza>
 
-    <div class="row row-cols-6 text-center pb-5">
-      <div class="col">
-        <img
-          class="img-pizze"
-          src="@/assets/img/h3-product-img-1a-100x100.png"
-          alt="PIZZA BISMARK"
-        />
-        <h6 class="title-oro fw-bold pt-3">BISMARK</h6>
-        <span class="text-muted text-decoration-line-through">$5.00</span>
-        <span class="title-orange px-2">$30.00</span>
-      </div>
-      <div class="col">
-        <img
-          class="img-pizze"
-          src="@/assets/img/h3-product-img-2a-150x150.png"
-          alt="PIZZA FIORI DI ZUCCA"
-        />
-        <h6 class="title-oro fw-bold pt-3">FIORI DI ZUCCA</h6>
-        <span class="title-orange px-2">$7.00 - $50.00</span>
-      </div>
-      <div class="col position-relative">
-        <img
-          class="img-pizze"
-          src="@/assets/img/h3-product-img-6a-100x100.png"
-          alt="PIZZA VALDOSTANA"
-        />
-        <h6 class="title-oro fw-bold pt-3">VALDOSTANA</h6>
-        <span class="title-orange px-2">$55.00</span>
-        <p class="soldout-pizza">SOLD</p>
-      </div>
-      <div class="col">
-        <img
-          class="img-pizze"
-          src="@/assets/img/h3-product-img-4a-150x150.png"
-          alt="PIZZA PIZZA TARTUFATA"
-        />
-        <h6 class="title-oro fw-bold pt-3">PIZZA TARTUFATA</h6>
-        <span class="title-orange px-2">$45.00</span>
-      </div>
-      <div class="col">
-        <img
-          class="img-pizze"
-          src="@/assets/img/h3-product-img-5a-150x150.png"
-          alt="PIZZA FRANCESCANA"
-        />
-        <h6 class="title-oro fw-bold pt-3">FRANCESCANA</h6>
-        <span class="title-orange px-2">$25.00</span>
-      </div>
-      <div class="col">
-        <img
-          class="img-pizze"
-          src="@/assets/img/h3-product-img-3a-150x150.png"
-          alt="PIZZA CAMPAGNOLA"
-        />
-        <h6 class="title-oro fw-bold pt-3">CAMPAGNOLA</h6>
-        <span class="title-orange px-2">$50 - $95.00</span>
-      </div>
-    </div>
     <!-- Fine pizze -->
     <!-- Inizio section date -->
     <div class="row">
@@ -253,7 +168,7 @@
       </div>
     </div>
     <!-- Fine section date -->
-
+    <!-- Inizio input -->
     <div class="background-input-img">
       <div class="row-cols-12 row position-relative">
         <form class="form-input" action="">
@@ -267,21 +182,29 @@
         <h6 class="subtitle-form">*Powered by OpenTable</h6>
       </div>
     </div>
+    <!-- Fine input -->
   </main>
 </template>
 
 <script>
+import Card from "./Card.vue";
+import CardPeople from "./CardPeople.vue";
+import CardPizza from "./CardPizza.vue";
+import Immagine from "./Immagine.vue";
+
 export default {
   name: "Main",
+  components: {
+    Card,
+    CardPeople,
+    CardPizza,
+    Immagine,
+  },
 };
 </script>
 
 <style lang="scss">
 @import "../style/variables";
-.main-img-section {
-  width: 100%;
-  border: 7px solid $color_white;
-}
 
 .background-image-hello {
   background-image: url(../assets/img/h3-testimonials-bckgrnd.jpg);
@@ -316,7 +239,9 @@ export default {
     bottom: 200px;
     border-radius: 50%;
     background: rgba(246, 247, 242, 255);
-    padding: 10px 10px;
+    width: 40px;
+    height: 40px;
+    object-fit: none;
   }
 }
 
@@ -324,38 +249,8 @@ export default {
   width: 100%;
 }
 
-.background-img-judge {
-  background-image: url(../assets/img/h3-background-img.jpg);
-  width: 100%;
-  height: 500px;
-  display: flex;
-  align-items: center;
-  color: $color_white;
-}
-
-.img-people {
-  width: 100%;
-  padding: 10px 0;
-}
-
 .container-loghi {
   background-color: rgba(247, 247, 242, 255);
-}
-
-.img-pizze {
-  width: 70%;
-}
-
-.soldout-pizza {
-  position: absolute;
-  right: 63px;
-  top: 14px;
-  background: $color_text;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  color: $color_white;
-  line-height: 60px;
 }
 
 .background-date {
@@ -397,5 +292,12 @@ export default {
     color: white;
     font-size: small;
   }
+}
+
+.next-slider {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: lightgray;
 }
 </style>
